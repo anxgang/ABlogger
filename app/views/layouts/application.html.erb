@@ -8,7 +8,23 @@
 </head>
 <body>
 
-<%= yield %>
+<%=render 'common/navbar' %>
+<div class="container">
+  <%= notice_message %>
+  <div class="row">
+    <!-- Blog Post Content Column -->
+    <div class="col-lg-8">
+      <%= yield %>
+    </div>
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-4">
+      <%= render 'common/sidebar' %>
+    </div>
+
+  </div>
+
+</div>
+<%= render 'common/footer' %>
 
 </body>
 </html>
